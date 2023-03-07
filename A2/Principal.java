@@ -5,8 +5,12 @@ public class Principal {
     public static void main(String[] args) {
         Persona p1 = new Persona();
         Persona p2 = new Persona();
-        String nombre,dni,apellido;
-        int edad;
+        
+        p1.setDNI(dni());
+        p1.setApellido(apellido());
+        p1.setEdad(edad());
+        p1.setNombre(nombre());
+
         
     }
 
