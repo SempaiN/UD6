@@ -1,4 +1,6 @@
-
+/*
+ * Ignacio Pérez Pose
+ */
 public class principal {
     public static void main(String[] args) {
         Punto p1 = new Punto();
