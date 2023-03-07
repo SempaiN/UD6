@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 /**
  * Persona
  */
 public class Persona {
+    static Scanner lectro = new Scanner(System.in);
     private String DNI,nombre,apellido;
     private int edad;
 
