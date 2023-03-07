@@ -5,10 +5,16 @@
 public class Punto {
     private int x,y;
     
-    public void ponX(int corx){
+    public void setX(int corx){
         x = corx;
     }
-    public void ponY(int cory){
+    public void setY(int cory){
         y = cory;
+    }
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
     }
 }
