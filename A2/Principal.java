@@ -6,12 +6,19 @@ public class Principal {
         Persona p1 = new Persona();
         Persona p2 = new Persona();
         
-        p1.setDNI(dni());
-        p1.setApellido(apellido());
-        p1.setEdad(edad());
         p1.setNombre(nombre());
-
+        p1.setApellido(apellido());
+        p1.setDNI(dni());
+        p1.setEdad(edad());
+        System.out.println(p1.getNombre() + " "  + p1.getApellido() + " con DNI " + p1.getDNI() + " "+ p1.mayorEdad(p1.getEdad()));
         
+        System.out.println();
+
+        p2.setNombre(nombre());
+        p2.setApellido(apellido());
+        p2.setDNI(dni());
+        p2.setEdad(edad());
+        System.out.println(p2.getNombre() + " " + p2.getApellido() + " con DNI " + p2.getDNI() + " "+ p2.mayorEdad(p2.getEdad()));
     }
 
     public static String nombre(){

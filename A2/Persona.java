@@ -32,4 +32,12 @@ public class Persona {
     public String getNombre() {
         return nombre;
     }
+    public String mayorEdad(int edad){
+        if (this.edad >= 18) {
+            return "es mayor de edad";
+        }
+        else{
+            return "no es mayor de edad";
+        }
+    }
 }
