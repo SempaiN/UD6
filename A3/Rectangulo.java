@@ -26,4 +26,18 @@ public class Rectangulo {
     public void setY2(int y2) {
         this.y2 = y2;
     }
+    public double calcPerimetro(){
+        double perimetro,altura,base;
+        altura=y2-y1;
+        base = x2-x1;
+        perimetro = 2*base+2*altura;
+        return perimetro;
+    }
+    public double calcArea(){
+        double area,altura,base;
+        altura=y2-y1;
+        base = x2-x1;
+        area = altura*base;
+        return area;
+    }
 }
