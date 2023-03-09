@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class Principal {
     public static Scanner lector = new Scanner(System.in);
     public static void main(String[] args) {
-        
+        Artículo pijama = new Artículo();
+        pijama.setNombre(pideNombre());
+        pijama.setPrecioSinIVA(pidePrecio());
+        System.out.println(pijama.getNombre() + " - Precio:" + pijama.getPrecioSinIVA() + "€ - IVA:" +Artículo.IVA+"%" + " - PVP:" + (pijama.getPrecioSinIVA()*(1+(Artículo.IVA/100))) );
     }
     public static String pideNombre(){
         System.out.println("Dame el nombre del producto");
