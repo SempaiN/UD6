@@ -1,9 +1,9 @@
 package A4;
 
 public class Artículo {
-    public static int IVA = 21;
+    public static double IVA = 21;
     private String nombre;
-    private int precioSinIVA;
+    private double precioSinIVA;
     public static int cuantosQuedan;
     public static void setCuantosQuedan(int cuantosQuedan) {
         Artículo.cuantosQuedan = cuantosQuedan;
@@ -17,10 +17,10 @@ public class Artículo {
     public String getNombre() {
         return nombre;
     }
-    public void setPrecioSinIVA(int precioSinIVA) {
+    public void setPrecioSinIVA(Double precioSinIVA) {
         this.precioSinIVA = precioSinIVA;
     }
-    public int getPrecioSinIVA() {
+    public double getPrecioSinIVA() {
         return precioSinIVA;
     }
 }
