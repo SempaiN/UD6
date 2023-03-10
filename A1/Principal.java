@@ -15,5 +15,7 @@ public class Principal {
         P3.y=7;
 
         System.out.println("("+P1.x+","+P1.y+")");
+        System.out.println("("+P2.x+","+P2.y+")");
+        System.out.println("("+P3 .x+","+P3.y+")");
     }
 }
