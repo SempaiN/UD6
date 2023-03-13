@@ -5,7 +5,7 @@ package B1;
  */
 
  public class Punto {
-    private int X,Y;
+    int X,Y;
     
     public Punto(int x,int y){
         this.X = x;
