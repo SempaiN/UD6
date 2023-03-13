@@ -8,8 +8,11 @@ public class Coche {
     //Atributos
     private String modelo,color,tipoPintura,matricula;
     private int añoFabricacion;
-    private enum tipoCoche {mini,utilitario,familiar,deportivo};
-    private enum modalidadSeguro{terceros,todoRiesgo};
+    private tipoCoche TipoCoche;
+    private modalidadSeguro ModalidadSeguro;
+
+    public enum tipoCoche {mini,utilitario,familiar,deportivo};
+    public enum modalidadSeguro{terceros,todoRiesgo};
 
     public void setModelo(String modelo){
         this.modelo = modelo;
@@ -45,13 +48,26 @@ public class Coche {
     public int getAñoFabric(){
         return this.añoFabricacion;
     }
+   
+    public void setModalidadSeguro(modalidadSeguro modalidadSeguro) {
+        ModalidadSeguro = modalidadSeguro;
+    }
+    public modalidadSeguro getModalidadSeguro() {
+        return ModalidadSeguro;
+    }
+    public void setTipoCoche(tipoCoche tipoCoche) {
+        TipoCoche = tipoCoche;
+    }
+    public tipoCoche getTipoCoche() {
+        return TipoCoche;
+    }
 
     public Coche(String modelo,String color,String pintura, tipoCoche tipo , int añoFabricacion,modalidadSeguro seguro){
         this.modelo = modelo;
         this.color = color;
         this.tipoPintura = pintura;
-        tipoCoche cosa = tipo;
+        this.TipoCoche =tipo;
         this.añoFabricacion = añoFabricacion;
-        modalidadSeguro modalidad = seguro;
+        this.ModalidadSeguro = seguro;
     }
 }
