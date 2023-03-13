@@ -5,18 +5,10 @@ package B1;
  */
 
  public class Punto {
-    private int x,y;
+    private int X,Y;
     
-    public void setX(int corx){
-        x = corx;
-    }
-    public void setY(int cory){
-        y = cory;
-    }
-    public int getX(){
-        return x;
-    }
-    public int getY(){
-        return y;
+    public Punto(int x,int y){
+        this.X = x;
+        this.Y = y;
     }
 }
