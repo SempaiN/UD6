@@ -18,7 +18,7 @@ public class Principal {
         }
         
         System.out.println();
-        
+
         altura = r2.y2-r2.y1;
         base = r2.x2-r2.x1;
         perimetro = 2*base+2*altura;
