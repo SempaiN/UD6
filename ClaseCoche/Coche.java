@@ -46,4 +46,12 @@ public class Coche {
         return this.añoFabricacion;
     }
 
+    public Coche(String modelo,String color,String pintura, tipoCoche tipo , int añoFabricacion,modalidadSeguro seguro){
+        this.modelo = modelo;
+        this.color = color;
+        this.tipoPintura = pintura;
+        tipoCoche cosa = tipo;
+        this.añoFabricacion = añoFabricacion;
+        modalidadSeguro modalidad = seguro;
+    }
 }
