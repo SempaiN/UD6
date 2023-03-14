@@ -37,7 +37,7 @@ public class Cuenta {
         }
     }
 
-    public boolean retirarDinero(int dinero){
+    public boolean retirarDinero(double dinero){
         boolean verda;
         if (dinero > 0) {
             this.saldo-=dinero;
