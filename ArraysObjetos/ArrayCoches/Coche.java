@@ -62,5 +62,8 @@ public class Coche {
     public boolean getMetal(){
         return this.esMetalizado;
     }
-    
+
+    public void imprimeCoche(){
+        System.out.println(getModelo() + " " + getColor() + " " +getMetal() + " " + getTipoC() + " " + getAñoFabricacion() + " " + getTipoS());
+    }
 }
