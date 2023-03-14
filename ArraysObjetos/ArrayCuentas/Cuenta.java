@@ -27,4 +27,26 @@ public class Cuenta {
     public double getSaldo(){
         return this.saldo;
     }
+
+    public void ingresarDinero(int dinero){
+        if (dinero > 0) {
+            this.saldo += dinero;
+        }
+        else{
+            System.out.println("Cantidad a introducir incorrecta");
+        }
+    }
+
+    public boolean retirarDinero(int dinero){
+        boolean verda;
+        if (dinero > 0) {
+            this.saldo-=dinero;
+            verda = true;
+        }
+        else{
+            System.out.println("Cantidad a introducir incorrecta");
+            verda = false;
+        }
+        return verda;
+    }
 }
