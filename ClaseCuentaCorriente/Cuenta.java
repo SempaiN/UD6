@@ -39,7 +39,7 @@ public class Cuenta {
 
     public boolean retirarDinero(int dinero){
         boolean verda = false;
-        if (this.saldo > 0 ) {
+        if (dinero > 0) {
             this.saldo -= dinero;
             verda = true;
         }
@@ -47,5 +47,9 @@ public class Cuenta {
             System.out.println("Cantidad a retirar erronea");
         }
         return verda;
+    }
+
+    public void muestraCuenta(){
+        System.out.println(this.nCuenta + " " + this.saldo);
     }
 }
