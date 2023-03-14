@@ -8,8 +8,9 @@ public class Principal {
     Coche coches [] = new Coche[3];
     for (int i = 0; i < coches.length; i++) {
         coches[i] = new Coche();
+        
         System.out.println("Dame el modelo del coche");
-        coches[i].setModelo(lec.nextLine());
+        coches[i].setModelo(lec.next());
         System.out.println("Dame el color del coche");
         coches[i].setColor(lec.next());
         System.out.println("Dime si la pintura es metalizada (true or false)");
@@ -20,9 +21,12 @@ public class Principal {
         coches[i].setTipoC(lec.nextInt());
         System.out.println("Dime el año de fabricación");
         coches[i].setAñoFabricacion(lec.nextInt());
-        
-
-
+        System.out.println("Dime la modalidad del seguro 0-terceros 1-todoRiesgo");
+        coches[i].setTipoS(lec.nextInt());
+        lec.nextLine();
+    }
+    for (int i = 0; i < coches.length; i++) {
+        coches[i].imprimeCoche();
     }
     
         
