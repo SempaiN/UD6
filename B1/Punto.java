@@ -5,7 +5,7 @@ package B1;
  */
 
  public class Punto {
-    int X,Y;
+    EJERCICIOS III: Arrays de Objetosint X,Y;
     
     public Punto(int x,int y){
         this.X = x;

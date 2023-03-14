@@ -19,12 +19,22 @@ public class Cuenta {
     }
 
     public Cuenta(int numcuent,double dinero){
-        this.nCuenta = numcuent;
-        this.saldo = dinero;
+        if (dinero > 0 ) {
+            this.nCuenta = numcuent;
+            this.saldo = dinero;    
+        }
+        else{
+            System.out.println("Saldo erroneo");
+        }
     }
 
     public void ingresarDinero(int dinero){
-        this.saldo += dinero;
+        if (dinero > 0) {
+            this.saldo += dinero;
+        }
+        else{
+            System.out.println("Cantidad a ingresar erronea");
+        }
     }
 
     public boolean retirarDinero(int dinero){
@@ -32,6 +42,9 @@ public class Cuenta {
         if (this.saldo > 0 ) {
             this.saldo -= dinero;
             verda = true;
+        }
+        else{
+            System.out.println("Cantidad a retirar erronea");
         }
         return verda;
     }
