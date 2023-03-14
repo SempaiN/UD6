@@ -99,10 +99,10 @@ public class Coche {
         System.out.println(getModelo() + " " + getColor() + " " +getMetal() + " " + getTipoC() + " " + getAñoFabricacion() + " " + getTipoS());
     }
     public int sumaMetalizados(){
-        if (getMetal()) {
+        if (!getMetal()) {
             metalizados++;
         }
-        return viejos;
+        return metalizados;
     }
     public int contViejos(){
         if (getAñoFabricacion() < 2000) {
