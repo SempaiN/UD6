@@ -20,6 +20,9 @@ public class Asignaturas {
         return nombre;
     }
 
+    public Asignaturas(){
+        
+    }
     public void setCodigoNumerico(int codigoNumerico) {
         this.codigoNumerico = codigoNumerico;
     }
