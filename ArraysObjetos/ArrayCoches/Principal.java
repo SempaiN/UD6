@@ -9,7 +9,6 @@ public class Principal {
     int riesgo = 0,tercero = 0,metal = 0,viejo = 0;
     for (int i = 0; i < coches.length; i++) {
         coches[i] = new Coche();
-        /*
         System.out.println("Dame el modelo del coche");
         coches[i].setModelo(lec.next());
         System.out.println("Dame el color del coche");
@@ -21,7 +20,7 @@ public class Principal {
         System.out.println("Dime el tipo del coche 0-mini 1-utilitario 2-familiar 3-deportivo ");
         coches[i].setTipoC(lec.nextInt());
         System.out.println("Dime el año de fabricación");
-        coches[i].setAñoFabricacion(lec.nextInt()); */
+        coches[i].setAñoFabricacion(lec.nextInt()); 
         System.out.println("Dime la modalidad del seguro 0-terceros 1-todoRiesgo");
         coches[i].setTipoS(lec.nextInt());
         lec.nextLine();
