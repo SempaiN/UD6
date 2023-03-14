@@ -20,7 +20,11 @@ public class Principal {
             case 1:
                 verCuentas();
                 break;
-        
+            case 2:
+                ingresarDin();
+                break;
+            case 3:
+                retirarDin();
             default:
                 break;
         }
@@ -36,6 +40,14 @@ public class Principal {
         System.out.println("Ahora dame la cantidad a ingresar");
         double dinero = lec.nextDouble();
         cuentas[ncuenta].ingresarDinero(dinero);
+
+    }
+    public static void retirarDin(){
+        System.out.println("Dime el número de cuenta al que vas a retirar");
+        int ncuenta = lec.nextInt();
+        System.out.println("Ahora dame la cantidad a retirar");
+        double dinero = lec.nextDouble();
+        cuentas[ncuenta].retirarDinero(dinero);
 
     }
 }
