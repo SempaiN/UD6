@@ -28,7 +28,7 @@ public class Cuenta {
         return this.saldo;
     }
 
-    public void ingresarDinero(int dinero){
+    public void ingresarDinero(double dinero){
         if (dinero > 0) {
             this.saldo += dinero;
         }
@@ -49,4 +49,5 @@ public class Cuenta {
         }
         return verda;
     }
-}
+
+    
