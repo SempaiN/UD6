@@ -11,12 +11,7 @@ public class Principal {
     boolean esMetalizado;
     Coche.tipoCoche tipoC;
     Coche.tipoSeguro tipoS;
-    for (int i = 0; i < coches.length; i++) {
-        System.out.println("Dame el modelo del coche");
-        modelo = lec.next();
-        coches[i].setModelo(modelo);
-        System.out.println("Dame el color del coche");
-        coches[i].setColor(lec.next());
+    
         
     }
 
