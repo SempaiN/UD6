@@ -45,17 +45,29 @@ public class Reloj {
         this.segundo = segundo;
     }
 
-    public void dimeHora() {
-        String hora = String.valueOf(this.hora);
-        String minuto = String.valueOf(this.minuto);
-        String segundo = String.valueOf(this.segundo);
-        System.out.println(hora + ":" + minuto + ":" + segundo);
+    public String dimeHora() {
+        return (this.hora+":"+this.minuto+":"+this.segundo);
     }
 
-    public void dimeHora12() {
-        for (int i = 0; i <= 12; i++) {
-
+    public String dimeHora12() {
+        if (this.hora < 12) {
+            return (this.hora+":"+this.minuto+":"+this.segundo);
         }
+        else{
+            return (this.hora-12+"pm:"+this.minuto+":"+this.segundo);
+        }
+    }
+
+    public void imprimeHora(){
+        System.out.println(dimeHora()); 
+    }
+    
+    public void imprimeHora12(){
+        System.out.println(dimeHora12());
+    }
+    
+    public void tick(){
+        
     }
 
 }
