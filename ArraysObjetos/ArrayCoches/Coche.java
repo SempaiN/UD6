@@ -4,6 +4,7 @@ public class Coche {
     public enum tipoCoche{mini,utilitario,familiar,deportivo};
     public enum tipoSeguro{tercero,todoRiesgo};
     private String modelo,color,matricula;
+
     private int añoFabricacion;
     private boolean esMetalizado;
     private tipoCoche tipoC;
@@ -19,6 +20,9 @@ public class Coche {
         this.tipoS = seguro;
     }
 
+    public Coche(){
+        
+    }
     public void setEsMetalizado(boolean esMetalizado) {
         this.esMetalizado = esMetalizado;
     }
