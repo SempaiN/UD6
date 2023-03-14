@@ -4,9 +4,16 @@ public class Reloj {
     private int hora, minuto, segundo;
 
     public Reloj(int hora, int minuto, int segundo) {
-        this.hora = hora;
-        this.minuto = minuto;
-        this.segundo = segundo;
+        if((hora <= 23 && hora >= 0) && (minuto >= 0 && minuto <= 59)&&(segundo >= 0 && segundo <= 59)){
+            this.hora = hora;
+            this.minuto = minuto;
+            this.segundo = segundo;
+        }
+        else{
+            System.out.println("Hora total incorrecta");
+        }
+
+        
     }
 
     public Reloj() {
@@ -16,7 +23,13 @@ public class Reloj {
     }
 
     public void setHora(int hora) {
-        this.hora = hora;
+        if (hora <= 23 && hora >= 0) {
+            this.hora = hora;    
+        }
+        else{
+            System.out.println("Hora incorrecta");
+        }
+        
     }
 
     public int getHora() {
@@ -24,7 +37,13 @@ public class Reloj {
     }
 
     public void setMinuto(int minuto) {
-        this.minuto = minuto;
+        if (minuto <= 59 && minuto >= 0) {
+            this.minuto = minuto;    
+        }
+        else{
+            System.out.println("Minuto introducido incorrecto");
+        }
+        
     }
 
     public int getMinuto() {
@@ -32,7 +51,13 @@ public class Reloj {
     }
 
     public void setSegundo(int segundo) {
-        this.segundo = segundo;
+        if (segundo <= 59 && segundo >= 0) {
+            this.segundo = segundo;    
+        }
+        else{
+            System.out.println("Minuto introducido incorrecto");
+        }
+        
     }
 
     public int getSegundo() {
@@ -40,9 +65,9 @@ public class Reloj {
     }
 
     public void setReloj(int hora, int minuto, int segundo) {
-        this.hora = hora;
-        this.minuto = minuto;
-        this.segundo = segundo;
+        setHora(hora);
+        setMinuto(minuto);
+        setSegundo(segundo);
     }
 
     public String dimeHora() {
