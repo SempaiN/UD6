@@ -67,7 +67,25 @@ public class Reloj {
     }
     
     public void tick(){
-        
+        if (segundo < 59) {
+            segundo++;
+        }
+        if (segundo == 59) {
+            segundo = 0;
+            if (minuto < 59) {
+                minuto++;
+            }
+            if (minuto == 59) {
+                minuto = 0;
+                if (hora < 23) {
+                    hora ++;
+                }
+                if (hora == 23) {
+                    hora = 0;
+                }
+
+            }
+        }
     }
 
 }
