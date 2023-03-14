@@ -38,11 +38,33 @@ public class Coche {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    public void setTipoC(tipoCoche tipoC) {
-        this.tipoC = tipoC;
+    public void setTipoC(int tipo) {
+        switch (tipo) {
+            case 0:
+                this.tipoC = tipoCoche.mini;
+                break;
+            case 1:
+                this.tipoC = tipoCoche.utilitario;
+                break;
+            case 2:
+                this.tipoC = tipoCoche.familiar;
+                break;
+            case 3:
+                this.tipoC = tipoCoche.deportivo;        
+            default:
+                break;
+        }
     }
-    public void setTipoS(tipoSeguro tipoS) {
-        this.tipoS = tipoS;
+    public void setTipoS(int tipo) {
+        switch (tipo) {
+            case 0:
+                this.tipoS = tipoSeguro.tercero;
+                break;
+            case 1:
+                this.tipoS = tipoSeguro.todoRiesgo;
+            default:
+                break;
+        }
     }
 
     public int getAñoFabricacion() {
