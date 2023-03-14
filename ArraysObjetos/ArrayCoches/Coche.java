@@ -3,6 +3,12 @@ package ArrayCoches;
 public class Coche {
     public enum tipoCoche{mini,utilitario,familiar,deportivo};
     public enum tipoSeguro{tercero,todoRiesgo};
+    
+    public static int metalizados = 0;
+    public static int viejos = 0;
+    public static int terceros = 0;
+    public static int riesgo = 0;
+
     private String modelo,color,matricula;
 
     private int añoFabricacion;
@@ -91,5 +97,29 @@ public class Coche {
 
     public void imprimeCoche(){
         System.out.println(getModelo() + " " + getColor() + " " +getMetal() + " " + getTipoC() + " " + getAñoFabricacion() + " " + getTipoS());
+    }
+    public int sumaMetalizados(){
+        if (getMetal()) {
+            metalizados++;
+        }
+        return viejos;
+    }
+    public int contViejos(){
+        if (getAñoFabricacion() < 2000) {
+            viejos++;
+        }
+        return viejos;
+    }
+    public int contTerceros(){
+        if (getTipoS().equals(tipoSeguro.tercero)) {
+            terceros++;
+        }
+        return terceros;
+    }
+    public int contRiesgo(){
+        if (getTipoS().equals(tipoSeguro.todoRiesgo)) {
+            riesgo++;
+        }
+        return riesgo;
     }
 }
