@@ -6,7 +6,14 @@ public class Principal {
     public static Cuenta cuentas [] = new Cuenta[5];
     public static Scanner lec = new Scanner(System.in);
     public static void main(String[] args) {
-        
+        cuentas[0] = new Cuenta(1, 2021);
+        cuentas[1] = new Cuenta(2, 2020);
+        cuentas[2] = new Cuenta(3, 41);
+        cuentas[3] = new Cuenta(4, 9999);
+        cuentas[4] = new Cuenta(5, 2.5);
+        do {
+            menu(opc());
+        } while (true);
     }
     public static int opc(){
         System.out.println("Dame la opción");
@@ -25,6 +32,14 @@ public class Principal {
                 break;
             case 3:
                 retirarDin();
+                break;
+            case 4:
+                transferirDinero();
+                break;
+            case 5:
+                System.exit(0);
+                break;
+                
             default:
                 break;
         }
@@ -48,6 +63,14 @@ public class Principal {
         System.out.println("Ahora dame la cantidad a retirar");
         double dinero = lec.nextDouble();
         cuentas[ncuenta].retirarDinero(dinero);
+    }
 
+    public static void transferirDinero(){
+        System.out.println("Dame el origen del dinero");
+        int origen = lec.nextInt();
+        System.out.println("Ahora el destinatario");
+        int destino = lec.nextInt();
+        cuentas[destino].ingresarDinero(cuentas[origen].getSaldo());
+        cuentas[origen].setSaldo(0);
     }
 }
