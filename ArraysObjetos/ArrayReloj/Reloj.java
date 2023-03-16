@@ -69,7 +69,27 @@ public class Reloj {
         System.out.println(dimeHora12());
     }
 
-    
+    public void tick(){
+        if (this.segundos < 59) {
+            this.segundos++;
+        }
+        if (this.segundos == 59) {
+            this.segundos = 0;
+            if (this.minutos < 59) {
+                this.minutos++;
+            }
+            if (this.minutos == 59) {
+                this.minutos = 0;
+                if (this.horas< 23) {
+                    this.horas ++;
+                }
+                if (this.horas == 23) {
+                    this.horas = 0;
+                }
+
+            }
+        }
+    }
     
     
     
