@@ -3,6 +3,18 @@ package ArrayReloj;
 public class Reloj {
     private int horas,minutos,segundos;
     
+    public Reloj(){
+        setHora(0);
+        setMinutos(0);
+        setSegundos(0);
+    }
+
+    public Reloj(int hora,int minuto,int segundo){
+        setHora(hora);
+        setMinutos(minuto);
+        setSegundos(segundo);
+    }
+
     public void setHora(int hora){
         if (hora >= 0 && hora <= 23) {
             this.horas = hora;
@@ -38,17 +50,18 @@ public class Reloj {
         return this.segundos;
     }
  
-    public Reloj(){
-        setHora(0);
-        setMinutos(0);
-        setSegundos(0);
+    public String dimeHora(){
+        return(getHora() + ":" + getMinutos() + ":" + getSegundos());
     }
-
-    public Reloj(int hora,int minuto,int segundo){
-        setHora(hora);
-        setMinutos(minuto);
-        setSegundos(segundo);
+    public String dimeHora12(){
+        if(getHora() > 12){
+            return(getHora()-12 + "pm:" + getMinutos() + ":" + getSegundos());
+        }
+        else{
+            return(getHora()-12 + "am:" + getMinutos() + ":" + getSegundos());
+        }
     }
+    
     
 
 
