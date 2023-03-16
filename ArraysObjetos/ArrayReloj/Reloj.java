@@ -61,6 +61,16 @@ public class Reloj {
             return(getHora()-12 + "am:" + getMinutos() + ":" + getSegundos());
         }
     }
+
+    public void imprimeHora(){
+        System.out.println(dimeHora());
+    }
+    public void imprimeHora12(){
+        System.out.println(dimeHora12());
+    }
+
+    
+    
     
     
 
