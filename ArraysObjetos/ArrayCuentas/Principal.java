@@ -73,6 +73,6 @@ public class Principal {
         System.out.println("Ahora el destinatario");
         int destino = lec.nextInt();
         cuentas[destino].ingresarDinero(dinero);
-        cuentas[origen].setSaldo(cuentas[origen].getSaldo() - dinero);
+        cuentas[origen].retirarDinero(dinero);
     }
 }
