@@ -26,7 +26,7 @@ public class Principal {
         verRelojes();
         
     }
-
+    
     public static void verRelojes(){
         for (int i = 0; i < items.length; i++) {
             items[i].imprimeHora();
