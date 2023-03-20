@@ -26,12 +26,12 @@ public class Principal {
         verRelojes();
         System.out.println();
         System.out.println("4.-");
-        for (int i = 0; i <5; i++) {
-            for (int j = 0; j <3600; j++) {
+        for (int i = 0; i <5; i++) { //Buscle para sumar en cada reloj
+            for (int j = 0; j <60*60; j++) { // Bucle que si se llegan a 60 minutos acaba
                 if(items[i].getMinutos() == 60 ){
                     break;
                 }
-                else{
+                else{ //Mientras no llegue a 60m suma segundos 
                     items[i].tick(); 
                 }
                 
@@ -42,6 +42,7 @@ public class Principal {
         
     }
 
+    //Método para mostrar todos los relojes
     public static void verRelojes(){
         for (int i = 0; i < items.length; i++) {
             items[i].imprimeHora();
