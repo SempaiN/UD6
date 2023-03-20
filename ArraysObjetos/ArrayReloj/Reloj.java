@@ -58,7 +58,7 @@ public class Reloj {
             return(getHora()-12 + "pm:" + getMinutos() + ":" + getSegundos());
         }
         else{
-            return(getHora()-12 + "am:" + getMinutos() + ":" + getSegundos());
+            return(getHora() + "am:" + getMinutos() + ":" + getSegundos());
         }
     }
 
