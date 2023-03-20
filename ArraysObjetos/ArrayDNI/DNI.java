@@ -3,6 +3,10 @@ package ArrayDNI;
 public class DNI {
     private int dni;
     
+    public DNI(int numero) {
+        this.dni = numero;
+    } 
+
     public int getDNI(){
         return dni;
     }
@@ -114,5 +118,10 @@ public class DNI {
     }
     public void imprime(){
         System.out.println(getNIF());
+    }
+
+    public DNI newRandom(){
+        DNI dni = this;
+        return dni;
     }
 }
