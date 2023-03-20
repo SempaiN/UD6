@@ -68,9 +68,11 @@ public class Principal {
     public static void transferirDinero(){
         System.out.println("Dame el origen del dinero");
         int origen = lec.nextInt();
+        System.out.println("Dame el dinero a transferir");
+        double dinero= lec.nextDouble();
         System.out.println("Ahora el destinatario");
         int destino = lec.nextInt();
-        cuentas[destino].ingresarDinero(cuentas[origen].getSaldo());
-        cuentas[origen].setSaldo(0);
+        cuentas[destino].ingresarDinero(dinero);
+        cuentas[origen].setSaldo(cuentas[origen].getSaldo() - dinero);
     }
 }
