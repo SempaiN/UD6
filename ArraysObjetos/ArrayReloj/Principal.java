@@ -24,9 +24,24 @@ public class Principal {
             }
         }
         verRelojes();
+        System.out.println();
+        System.out.println("4.-");
+        for (int i = 0; i <5; i++) {
+            for (int j = 0; j <3600; j++) {
+                if(items[i].getMinutos() == 60 ){
+                    break;
+                }
+                else{
+                    items[i].tick(); 
+                }
+                
+
+            }
+        }
+        verRelojes();
         
     }
-    
+
     public static void verRelojes(){
         for (int i = 0; i < items.length; i++) {
             items[i].imprimeHora();
