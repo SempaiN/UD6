@@ -109,4 +109,10 @@ public class DNI {
         }
         return letra;
     }
+    public String getNIF(){
+       return(String.valueOf(dni)+getLetra());
+    }
+    public void imprime(){
+        System.out.println(getNIF());
+    }
 }
