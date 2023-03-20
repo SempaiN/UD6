@@ -12,13 +12,13 @@ public class Principal {
         verRelojes();
         System.out.println();
         System.out.println("2.-");
-        for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) { //Sumo 1s a cada reloj
             items[i].tick();
         }
         verRelojes();
         System.out.println();
         System.out.println("3.-");
-        for (int i = 0; i <5; i++) {
+        for (int i = 0; i <5; i++) {//Sumo un minuto
             for (int j = 0; j <= 60; j++) {
                 items[i].tick();
             }
