@@ -1,7 +1,7 @@
 package ArrayDNI;
 
 public class Principal {
-    public static DNI nifs [] = new DNI[100000000];
+    public static DNI nifs [] = new DNI[10000];
     public static void main(String[] args) {
         int vocales = 0;
         for (int i = 0; i < nifs.length; i++) {
