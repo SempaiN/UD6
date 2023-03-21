@@ -20,5 +20,14 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
+    public void ingresarDinero(double dinero){
+        if (dinero > 0) {
+            this.saldo += dinero;
+        }
+        else if (dinero < 0) {
+            System.out.println("Cantidad introducida erronea");
+        }
+
+    }
 
 }

@@ -3,19 +3,16 @@ package AppBanco;
 import java.util.Scanner;
 
 public class Principal {
+    public static Cuenta cuentas[] = new Cuenta[100];
     public static Scanner lector = new Scanner(System.in);
     public static void main(String[] args) {
-        
-        
+        do {
+           menu(opc());
+            
+        } while (!(!true));
     }
 
     public static int opc(){
-        System.out.println("Dame la opción");
-        int opc = lector.nextInt();
-        return opc;
-    }
-
-    public static void menu(int opc){
         System.out.println("1.- Ver cuentas");
         System.out.println("2.- Ingresar Dinero");
         System.out.println("3.- Retirar Dinero");
@@ -25,10 +22,15 @@ public class Principal {
         System.out.println("7.- Buscar cuenta");
         System.out.println("8.- Mostrar morosos");
         System.out.println("9.- Salir");
-        
+        System.out.println("Dame la opción");
+        int opc = lector.nextInt();
+        return opc;
+    }
+
+    public static void menu(int opc){
         switch (opc) {
             case 1:
-                //verCuentas();
+                verCuentas();
                 break;
             
             case 2:
@@ -67,5 +69,16 @@ public class Principal {
                 System.out.println("Esa opción no se encuentra disponible");
                 break;
         }
+    }
+
+    public static void verCuentas(){
+        for (int i = 0; i < cuentas.length; i++) {
+            System.out.println(i+cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo()+"€");
+        }
+    }
+
+    public static void ingresarDinero(){
+        verCuentas();
+        System.out.println("Dame la cuenta a la que quieres ingresar");
     }
 }
