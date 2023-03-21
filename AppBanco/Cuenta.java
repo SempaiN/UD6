@@ -9,7 +9,7 @@ public class Cuenta {
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.Nombre = nombre;
     }
 
     public double getSaldo() {
@@ -20,5 +20,5 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
-    
+
 }
