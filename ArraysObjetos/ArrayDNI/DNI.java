@@ -5,6 +5,9 @@ public class DNI {
     
     public DNI(int numero) {
         this.dni = numero;
+    }  
+    public DNI() {
+        
     } 
 
     public int getDNI(){
@@ -120,8 +123,14 @@ public class DNI {
         System.out.println(getNIF());
     }
 
-    public DNI newRandom(){
-        DNI dni = this;
+    public static DNI newRandom() {
+        // Generar un número aleatorio de 8 dígitos y calcular el dígito de control
+        int num = (int) (Math.random() * 90000000) + 10000000;
+       
+        // Crear un nuevo objeto DNI con el número generado
+        DNI dni = new DNI(num);
+    
+        // Devolver el objeto DNI generado
         return dni;
     }
 }
