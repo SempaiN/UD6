@@ -6,6 +6,8 @@ public class Principal {
     public static Cuenta cuentas[] = new Cuenta[100];
     public static Scanner lector = new Scanner(System.in);
     public static void main(String[] args) {
+        cuentas[0] = 
+        
         do {
            menu(opc());
             
