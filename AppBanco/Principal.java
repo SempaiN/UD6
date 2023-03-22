@@ -78,10 +78,20 @@ public class Principal {
     }
 
     public static void ingresarDinero(){
-        //verCuentas();
+        verCuentas();
         System.out.println("Dame la cuenta a la que quieres ingresar");
         int cuenta = lector.nextInt();
         System.out.println("Dame la cantidad a ingresar");
         cuentas[cuenta].ingresarDinero(lector.nextDouble());
     }
+    
+    public static void retirarDinero(){
+        verCuentas();
+        System.out.println("Dame la cuenta a la que quieres retirar");
+        int cuenta = lector.nextInt();
+        System.out.println("Dame la cantidad a retirar");
+        cuentas[cuenta].retirarDinero(lector.nextDouble());
+    }
+
+
 }
