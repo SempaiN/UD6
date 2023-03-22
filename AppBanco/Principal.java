@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Principal {
     public static Cuenta cuentas[] = new Cuenta[100];
+    public static int numCuentas = 1;
     public static Scanner lector = new Scanner(System.in);
     public static void main(String[] args) {
-        cuentas[0] = 
+        cuentas[0] = new Cuenta("julio", 20);
         
         do {
            menu(opc());
@@ -40,7 +41,7 @@ public class Principal {
                 break;
             
             case 3:
-                //retirarDinero();
+                retirarDinero();
                 break;
             
             case 4:
@@ -74,8 +75,8 @@ public class Principal {
     }
 
     public static void verCuentas(){
-        for (int i = 0; i < cuentas.length; i++) {
-            System.out.println(i+cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo()+"€");
+        for (int i = 0; i < numCuentas; i++) {
+            System.out.println(i+" "+cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo()+"€");
         }
     }
 

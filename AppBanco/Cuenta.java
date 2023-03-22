@@ -4,6 +4,11 @@ public class Cuenta {
     private String Nombre;
     private double saldo;
 
+    public Cuenta(String nombre,double dinero){
+        this.Nombre = nombre;
+        this.saldo = dinero;
+    }
+    
     public String getNombre() {
         return Nombre;
     }
