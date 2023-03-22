@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Principal {
     public static Cuenta cuentas[] = new Cuenta[100];
-    public static int numCuentas = 1;
+    public static int numCuentas = 2;
     public static Scanner lector = new Scanner(System.in);
     public static void main(String[] args) {
         cuentas[0] = new Cuenta("julio", 20);
-        
+        cuentas[1] = new Cuenta("julia", 120);
         do {
            menu(opc());
             
@@ -45,7 +45,7 @@ public class Principal {
                 break;
             
             case 4:
-                //trasferirDinero();
+                trasferirDinero();
                 break;
             
             case 5:
@@ -104,8 +104,14 @@ public class Principal {
         int destino = lector.nextInt();
         System.out.println("Ahora la cantidad a transferir");
         double dinero = lector.nextDouble();
-        cuentas[destino].ingresarDinero(dinero);
-        cuentas[origen].retirarDinero(dinero);
+        if ((cuentas[origen].getSaldo() - dinero) <= -100) {
+            System.out.println("No se puede realizar la transferencia");
+        }
+        else{
+            cuentas[destino].ingresarDinero(dinero);
+            cuentas[origen].retirarDinero(dinero);
+        }
+        
 
     }
 

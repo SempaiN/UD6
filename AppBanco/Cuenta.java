@@ -34,17 +34,15 @@ public class Cuenta {
         }
     }
     
-    public  void retirarDinero(double dinero){
-        double calculo =getSaldo();
-        if ((calculo - dinero) > -100) {
+    public void retirarDinero(double dinero){
+        if (dinero > 0 && (this.saldo - dinero) >= -100) {
             System.out.println("Dinero retirado");
             this.saldo -= dinero;
+        } else {
+            System.out.println("No se puede retirar esa cantidad");
         }
-        else{
-            System.out.println("No se puede quedar la cuenta con menos de -100€");
-        }
-
     }
+    
 
 
 }
