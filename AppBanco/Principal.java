@@ -96,5 +96,17 @@ public class Principal {
         cuentas[cuenta].retirarDinero(lector.nextDouble());
     }
 
+    public static void trasferirDinero(){
+        verCuentas();
+        System.out.println("Dame la cuenta de origen");
+        int origen = lector.nextInt();
+        System.out.println("Ahora la cuenta de destinno");
+        int destino = lector.nextInt();
+        System.out.println("Ahora la cantidad a transferir");
+        double dinero = lector.nextDouble();
+        cuentas[destino].ingresarDinero(dinero);
+        cuentas[origen].retirarDinero(dinero);
+
+    }
 
 }
