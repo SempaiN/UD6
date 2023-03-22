@@ -54,7 +54,7 @@ public class Principal {
                 break;
 
             case 6:
-                // eliminarCuenta();
+                eliminarCuenta();
                 break;
 
             case 7:
@@ -77,7 +77,12 @@ public class Principal {
 
     public static void verCuentas() {
         for (int i = 0; i < numCuentas; i++) {
-            System.out.println(i + " " + cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo() + "€");
+            if (cuentas[i].getNombre()==null) {
+                continue;
+            }
+            else{
+                System.out.println(i + " " + cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo() + "€");    
+            }
         }
     }
 
@@ -144,6 +149,20 @@ public class Principal {
                 }
             }
 
+        }
+    }
+
+    public static void eliminarCuenta(){
+        verCuentas();
+        System.out.println("Dime la cuenta que quieres eliminar");
+        int nCuenta = lector.nextInt();
+        if (cuentas[nCuenta] != null) {
+            cuentas[nCuenta].setNombre(null);
+            cuentas[nCuenta].setSaldo(0);
+            numCuentas--;
+        }
+        else{
+            System.out.println("Esa cuenta no existe");
         }
     }
 
