@@ -34,7 +34,7 @@ public class Principal {
                 break;
             
             case 2:
-                //ingresarDinero();
+                ingresarDinero();
                 break;
             
             case 3:
@@ -78,7 +78,10 @@ public class Principal {
     }
 
     public static void ingresarDinero(){
-        verCuentas();
+        //verCuentas();
         System.out.println("Dame la cuenta a la que quieres ingresar");
+        int cuenta = lector.nextInt();
+        System.out.println("Dame la cantidad a ingresar");
+        cuentas[cuenta].ingresarDinero(lector.nextDouble());
     }
 }
