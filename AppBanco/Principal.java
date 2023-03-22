@@ -6,16 +6,17 @@ public class Principal {
     public static Cuenta cuentas[] = new Cuenta[100];
     public static int numCuentas = 2;
     public static Scanner lector = new Scanner(System.in);
+
     public static void main(String[] args) {
         cuentas[0] = new Cuenta("julio", 20);
         cuentas[1] = new Cuenta("julia", 120);
         do {
-           menu(opc());
-            
+            menu(opc());
+
         } while (!(!true));
     }
 
-    public static int opc(){
+    public static int opc() {
         System.out.println("1.- Ver cuentas");
         System.out.println("2.- Ingresar Dinero");
         System.out.println("3.- Retirar Dinero");
@@ -30,65 +31,65 @@ public class Principal {
         return opc;
     }
 
-    public static void menu(int opc){
+    public static void menu(int opc) {
         switch (opc) {
             case 1:
                 verCuentas();
                 break;
-            
+
             case 2:
                 ingresarDinero();
                 break;
-            
+
             case 3:
                 retirarDinero();
                 break;
-            
+
             case 4:
                 trasferirDinero();
                 break;
-            
+
             case 5:
                 agregarCuenta();
                 break;
-            
+
             case 6:
-                //eliminarCuenta();
+                // eliminarCuenta();
                 break;
-            
+
             case 7:
-                //buscarCuenta();
+                // buscarCuenta();
                 break;
-            
+
             case 8:
-                //mostrarMorosos();
+                // mostrarMorosos();
                 break;
-            
+
             case 9:
                 System.exit(0);
                 break;
-            
+
             default:
                 System.out.println("Esa opción no se encuentra disponible");
                 break;
         }
     }
 
-    public static void verCuentas(){
+    public static void verCuentas() {
         for (int i = 0; i < numCuentas; i++) {
-            System.out.println(i+" "+cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo()+"€");
+            System.out.println(i + " " + cuentas[i].getNombre() + " Saldo:" + cuentas[i].getSaldo() + "€");
         }
     }
 
-    public static void ingresarDinero(){
+    public static void ingresarDinero() {
         verCuentas();
         System.out.println("Dame la cuenta a la que quieres ingresar");
         int cuenta = lector.nextInt();
         System.out.println("Dame la cantidad a ingresar");
         cuentas[cuenta].ingresarDinero(lector.nextDouble());
     }
-    
-    public static void retirarDinero(){
+
+    public static void retirarDinero() {
         verCuentas();
         System.out.println("Dame la cuenta a la que quieres retirar");
         int cuenta = lector.nextInt();
@@ -96,7 +97,7 @@ public class Principal {
         cuentas[cuenta].retirarDinero(lector.nextDouble());
     }
 
-    public static void trasferirDinero(){
+    public static void trasferirDinero() {
         verCuentas();
         System.out.println("Dame la cuenta de origen");
         int origen = lector.nextInt();
@@ -106,32 +107,43 @@ public class Principal {
         double dinero = lector.nextDouble();
         if ((cuentas[origen].getSaldo() - dinero) <= -100) {
             System.out.println("No se puede realizar la transferencia");
-        }
-        else{
+        } else {
             cuentas[destino].ingresarDinero(dinero);
             cuentas[origen].retirarDinero(dinero);
         }
     }
 
-    public static void agregarCuenta(){
+    public static void agregarCuenta() {
         lector.nextLine();
-        if (numCuentas >=100) {
+        boolean exist = false;
+        if (numCuentas >= 100) {
             System.out.println("No se pueden crear mas cuentas");
-        }
-        else{
+        } else {
             System.out.println("Dame el nombre de la cuenta");
             String nombre = lector.nextLine();
             for (int i = 0; i < cuentas.length; i++) {
                 if (cuentas[i] == null) {
                     continue;
-                }
-                else if (cuentas[i].getNombre().equals(nombre)){
+                } else if (cuentas[i].getNombre().equals(nombre)) {
                     System.out.println("Esa cuenta ya existe");
+                    exist = true;
                     break;
                 }
-                
-                
             }
+            if (!exist) {
+                System.out.println("Dime el saldo de la cuenta");
+                double saldo = lector.nextDouble();
+                for (int i = 0; i < cuentas.length; i++) {
+                    if (cuentas[i] == null) {
+                        cuentas[i] = new Cuenta(nombre, saldo);
+                        numCuentas++;
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+
         }
     }
 
