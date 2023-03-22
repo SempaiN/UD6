@@ -49,7 +49,7 @@ public class Principal {
                 break;
             
             case 5:
-                //agregarCuenta();
+                agregarCuenta();
                 break;
             
             case 6:
@@ -111,8 +111,28 @@ public class Principal {
             cuentas[destino].ingresarDinero(dinero);
             cuentas[origen].retirarDinero(dinero);
         }
-        
+    }
 
+    public static void agregarCuenta(){
+        lector.nextLine();
+        if (numCuentas >=100) {
+            System.out.println("No se pueden crear mas cuentas");
+        }
+        else{
+            System.out.println("Dame el nombre de la cuenta");
+            String nombre = lector.nextLine();
+            for (int i = 0; i < cuentas.length; i++) {
+                if (cuentas[i] == null) {
+                    continue;
+                }
+                else if (cuentas[i].getNombre().equals(nombre)){
+                    System.out.println("Esa cuenta ya existe");
+                    break;
+                }
+                
+                
+            }
+        }
     }
 
 }
