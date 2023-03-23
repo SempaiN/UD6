@@ -159,7 +159,7 @@ public class Principal {
         if (cuentas[nCuenta] != null) {
             cuentas[nCuenta].setNombre(null);
             cuentas[nCuenta].setSaldo(0);
-            numCuentas--;
+            
         }
         else{
             System.out.println("Esa cuenta no existe");
